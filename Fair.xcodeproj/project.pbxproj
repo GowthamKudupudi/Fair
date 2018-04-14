@@ -24,10 +24,10 @@
 		651DB48B1EA9CC8E00970AD3 /* HelloMetalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651DB48A1EA9CC8E00970AD3 /* HelloMetalUITests.swift */; };
 		652967E51EC18CBC00C9352E /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652967E41EC18CBC00C9352E /* Cube.swift */; };
 		652967E71EC526EB00C9352E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652967E61EC526EB00C9352E /* CoreMotion.framework */; };
+		6534F2DF200E983B00704B1B /* Fair-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 6534F2DE200E983A00704B1B /* Fair-Bridging-Header.h */; };
 		65490A3A1EBC32D100B4E9BC /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65490A391EBC32D100B4E9BC /* Light.swift */; };
 		655A78D01F22494E00245EA2 /* MetalTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6568778E1EB7BEDB00C566BE /* MetalTexture.swift */; };
 		655A78D11F22495C00245EA2 /* Matrix4.h in Headers */ = {isa = PBXBuildFile; fileRef = 65BD699C1EEC80C90082016C /* Matrix4.h */; };
-		655A78D31F22495C00245EA2 /* HelloMetal-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 658B37B81EAD0A45006FB97A /* HelloMetal-Bridging-Header.h */; };
 		655A78D41F22495C00245EA2 /* nautical.h in Headers */ = {isa = PBXBuildFile; fileRef = 6580AA531EB2FC4200F28303 /* nautical.h */; };
 		6568778F1EB7BEDB00C566BE /* MetalTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6568778E1EB7BEDB00C566BE /* MetalTexture.swift */; };
 		656877911EB8FCD100C566BE /* cube.png in Resources */ = {isa = PBXBuildFile; fileRef = 656877901EB8FCD100C566BE /* cube.png */; };
@@ -65,7 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		65131A861F07DD8000151FC8 /* HelloMetal-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloMetal-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65131A861F07DD8000151FC8 /* Fair-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fair-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65131A881F07DD8100151FC8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65131A891F07DD8100151FC8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		65131A8B1F07DD8100151FC8 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
@@ -80,21 +80,22 @@
 		65131A9A1F07DD8100151FC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		65131A9C1F07DD8100151FC8 /* HelloMetal_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloMetal_macOS.entitlements; sourceTree = "<group>"; };
 		651CCBED1EC0C4F9006FD161 /* nautical.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nautical.cpp; sourceTree = "<group>"; };
-		651DB4671EA9CC8E00970AD3 /* HelloMetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloMetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		651DB4671EA9CC8E00970AD3 /* Fair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		651DB46A1EA9CC8E00970AD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		651DB46C1EA9CC8E00970AD3 /* MetalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewController.swift; sourceTree = "<group>"; };
 		651DB46F1EA9CC8E00970AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		651DB4711EA9CC8E00970AD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		651DB4741EA9CC8E00970AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		651DB4761EA9CC8E00970AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		651DB47B1EA9CC8E00970AD3 /* HelloMetalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloMetalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		651DB47B1EA9CC8E00970AD3 /* FairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		651DB47F1EA9CC8E00970AD3 /* HelloMetalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloMetalTests.swift; sourceTree = "<group>"; };
 		651DB4811EA9CC8E00970AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		651DB4861EA9CC8E00970AD3 /* HelloMetalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloMetalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		651DB4861EA9CC8E00970AD3 /* FairUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FairUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		651DB48A1EA9CC8E00970AD3 /* HelloMetalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloMetalUITests.swift; sourceTree = "<group>"; };
 		651DB48C1EA9CC8E00970AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652967E41EC18CBC00C9352E /* Cube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
 		652967E61EC526EB00C9352E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		6534F2DE200E983A00704B1B /* Fair-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Fair-Bridging-Header.h"; path = "Common/Fair-Bridging-Header.h"; sourceTree = "<group>"; };
 		65490A391EBC32D100B4E9BC /* Light.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
 		6568778E1EB7BEDB00C566BE /* MetalTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalTexture.swift; sourceTree = "<group>"; };
 		656877901EB8FCD100C566BE /* cube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cube.png; path = Common/cube.png; sourceTree = SOURCE_ROOT; };
@@ -150,7 +151,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		65131A871F07DD8000151FC8 /* HelloMetal-macOS */ = {
+		65131A871F07DD8000151FC8 /* Fair-macOS */ = {
 			isa = PBXGroup;
 			children = (
 				65131A881F07DD8100151FC8 /* AppDelegate.h */,
@@ -167,18 +168,19 @@
 				65131A9A1F07DD8100151FC8 /* main.m */,
 				65131A9C1F07DD8100151FC8 /* HelloMetal_macOS.entitlements */,
 			);
-			path = "HelloMetal-macOS";
+			path = "Fair-macOS";
 			sourceTree = "<group>";
 		};
 		651DB45E1EA9CC8E00970AD3 = {
 			isa = PBXGroup;
 			children = (
+				6534F2DE200E983A00704B1B /* Fair-Bridging-Header.h */,
 				655A78CF1F22486800245EA2 /* Common */,
-				65131A871F07DD8000151FC8 /* HelloMetal-macOS */,
+				65131A871F07DD8000151FC8 /* Fair-macOS */,
 				6580AA551EB32C1300F28303 /* Frameworks */,
-				651DB4691EA9CC8E00970AD3 /* HelloMetal */,
-				651DB47E1EA9CC8E00970AD3 /* HelloMetalTests */,
-				651DB4891EA9CC8E00970AD3 /* HelloMetalUITests */,
+				651DB4691EA9CC8E00970AD3 /* Fair */,
+				651DB47E1EA9CC8E00970AD3 /* FairTests */,
+				651DB4891EA9CC8E00970AD3 /* FairUITests */,
 				651DB4681EA9CC8E00970AD3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -186,15 +188,15 @@
 		651DB4681EA9CC8E00970AD3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				651DB4671EA9CC8E00970AD3 /* HelloMetal.app */,
-				651DB47B1EA9CC8E00970AD3 /* HelloMetalTests.xctest */,
-				651DB4861EA9CC8E00970AD3 /* HelloMetalUITests.xctest */,
-				65131A861F07DD8000151FC8 /* HelloMetal-macOS.app */,
+				651DB4671EA9CC8E00970AD3 /* Fair.app */,
+				651DB47B1EA9CC8E00970AD3 /* FairTests.xctest */,
+				651DB4861EA9CC8E00970AD3 /* FairUITests.xctest */,
+				65131A861F07DD8000151FC8 /* Fair-macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		651DB4691EA9CC8E00970AD3 /* HelloMetal */ = {
+		651DB4691EA9CC8E00970AD3 /* Fair */ = {
 			isa = PBXGroup;
 			children = (
 				651DB46A1EA9CC8E00970AD3 /* AppDelegate.swift */,
@@ -205,25 +207,25 @@
 				656877921EB9A2D600C566BE /* MySceneViewController.swift */,
 				651DB46C1EA9CC8E00970AD3 /* MetalViewController.swift */,
 			);
-			path = HelloMetal;
+			path = Fair;
 			sourceTree = "<group>";
 		};
-		651DB47E1EA9CC8E00970AD3 /* HelloMetalTests */ = {
+		651DB47E1EA9CC8E00970AD3 /* FairTests */ = {
 			isa = PBXGroup;
 			children = (
 				651DB47F1EA9CC8E00970AD3 /* HelloMetalTests.swift */,
 				651DB4811EA9CC8E00970AD3 /* Info.plist */,
 			);
-			path = HelloMetalTests;
+			path = FairTests;
 			sourceTree = "<group>";
 		};
-		651DB4891EA9CC8E00970AD3 /* HelloMetalUITests */ = {
+		651DB4891EA9CC8E00970AD3 /* FairUITests */ = {
 			isa = PBXGroup;
 			children = (
 				651DB48A1EA9CC8E00970AD3 /* HelloMetalUITests.swift */,
 				651DB48C1EA9CC8E00970AD3 /* Info.plist */,
 			);
-			path = HelloMetalUITests;
+			path = FairUITests;
 			sourceTree = "<group>";
 		};
 		655A78CF1F22486800245EA2 /* Common */ = {
@@ -268,7 +270,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				655A78D31F22495C00245EA2 /* HelloMetal-Bridging-Header.h in Headers */,
+				6534F2DF200E983B00704B1B /* Fair-Bridging-Header.h in Headers */,
 				655A78D41F22495C00245EA2 /* nautical.h in Headers */,
 				655A78D11F22495C00245EA2 /* Matrix4.h in Headers */,
 			);
@@ -277,9 +279,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		65131A851F07DD8000151FC8 /* HelloMetal-macOS */ = {
+		65131A851F07DD8000151FC8 /* Fair-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65131A9F1F07DD8100151FC8 /* Build configuration list for PBXNativeTarget "HelloMetal-macOS" */;
+			buildConfigurationList = 65131A9F1F07DD8100151FC8 /* Build configuration list for PBXNativeTarget "Fair-macOS" */;
 			buildPhases = (
 				65131A821F07DD8000151FC8 /* Sources */,
 				65131A831F07DD8000151FC8 /* Frameworks */,
@@ -289,14 +291,14 @@
 			);
 			dependencies = (
 			);
-			name = "HelloMetal-macOS";
+			name = "Fair-macOS";
 			productName = "HelloMetal-macOS";
-			productReference = 65131A861F07DD8000151FC8 /* HelloMetal-macOS.app */;
+			productReference = 65131A861F07DD8000151FC8 /* Fair-macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		651DB4661EA9CC8E00970AD3 /* HelloMetal */ = {
+		651DB4661EA9CC8E00970AD3 /* Fair */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 651DB48F1EA9CC8E00970AD3 /* Build configuration list for PBXNativeTarget "HelloMetal" */;
+			buildConfigurationList = 651DB48F1EA9CC8E00970AD3 /* Build configuration list for PBXNativeTarget "Fair" */;
 			buildPhases = (
 				651DB4631EA9CC8E00970AD3 /* Sources */,
 				651DB4641EA9CC8E00970AD3 /* Frameworks */,
@@ -307,14 +309,14 @@
 			);
 			dependencies = (
 			);
-			name = HelloMetal;
+			name = Fair;
 			productName = HelloMetal;
-			productReference = 651DB4671EA9CC8E00970AD3 /* HelloMetal.app */;
+			productReference = 651DB4671EA9CC8E00970AD3 /* Fair.app */;
 			productType = "com.apple.product-type.application";
 		};
-		651DB47A1EA9CC8E00970AD3 /* HelloMetalTests */ = {
+		651DB47A1EA9CC8E00970AD3 /* FairTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 651DB4921EA9CC8E00970AD3 /* Build configuration list for PBXNativeTarget "HelloMetalTests" */;
+			buildConfigurationList = 651DB4921EA9CC8E00970AD3 /* Build configuration list for PBXNativeTarget "FairTests" */;
 			buildPhases = (
 				651DB4771EA9CC8E00970AD3 /* Sources */,
 				651DB4781EA9CC8E00970AD3 /* Frameworks */,
@@ -325,14 +327,14 @@
 			dependencies = (
 				651DB47D1EA9CC8E00970AD3 /* PBXTargetDependency */,
 			);
-			name = HelloMetalTests;
+			name = FairTests;
 			productName = HelloMetalTests;
-			productReference = 651DB47B1EA9CC8E00970AD3 /* HelloMetalTests.xctest */;
+			productReference = 651DB47B1EA9CC8E00970AD3 /* FairTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		651DB4851EA9CC8E00970AD3 /* HelloMetalUITests */ = {
+		651DB4851EA9CC8E00970AD3 /* FairUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 651DB4951EA9CC8E00970AD3 /* Build configuration list for PBXNativeTarget "HelloMetalUITests" */;
+			buildConfigurationList = 651DB4951EA9CC8E00970AD3 /* Build configuration list for PBXNativeTarget "FairUITests" */;
 			buildPhases = (
 				651DB4821EA9CC8E00970AD3 /* Sources */,
 				651DB4831EA9CC8E00970AD3 /* Frameworks */,
@@ -343,9 +345,9 @@
 			dependencies = (
 				651DB4881EA9CC8E00970AD3 /* PBXTargetDependency */,
 			);
-			name = HelloMetalUITests;
+			name = FairUITests;
 			productName = HelloMetalUITests;
-			productReference = 651DB4861EA9CC8E00970AD3 /* HelloMetalUITests.xctest */;
+			productReference = 651DB4861EA9CC8E00970AD3 /* FairUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -383,7 +385,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 651DB4621EA9CC8E00970AD3 /* Build configuration list for PBXProject "HelloMetal" */;
+			buildConfigurationList = 651DB4621EA9CC8E00970AD3 /* Build configuration list for PBXProject "Fair" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -396,10 +398,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				651DB4661EA9CC8E00970AD3 /* HelloMetal */,
-				651DB47A1EA9CC8E00970AD3 /* HelloMetalTests */,
-				651DB4851EA9CC8E00970AD3 /* HelloMetalUITests */,
-				65131A851F07DD8000151FC8 /* HelloMetal-macOS */,
+				651DB4661EA9CC8E00970AD3 /* Fair */,
+				651DB47A1EA9CC8E00970AD3 /* FairTests */,
+				651DB4851EA9CC8E00970AD3 /* FairUITests */,
+				65131A851F07DD8000151FC8 /* Fair-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -502,12 +504,12 @@
 /* Begin PBXTargetDependency section */
 		651DB47D1EA9CC8E00970AD3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 651DB4661EA9CC8E00970AD3 /* HelloMetal */;
+			target = 651DB4661EA9CC8E00970AD3 /* Fair */;
 			targetProxy = 651DB47C1EA9CC8E00970AD3 /* PBXContainerItemProxy */;
 		};
 		651DB4881EA9CC8E00970AD3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 651DB4661EA9CC8E00970AD3 /* HelloMetal */;
+			target = 651DB4661EA9CC8E00970AD3 /* Fair */;
 			targetProxy = 651DB4871EA9CC8E00970AD3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -551,7 +553,7 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = "HelloMetal-macOS/HelloMetal_macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Fair-macOS/Fair_macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 92458GN43Z;
@@ -578,7 +580,7 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = "HelloMetal-macOS/HelloMetal_macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Fair-macOS/Fair_macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 92458GN43Z;
@@ -691,18 +693,18 @@
 		651DB4901EA9CC8E00970AD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 92458GN43Z;
-				INFOPLIST_FILE = HelloMetal/Info.plist;
+				INFOPLIST_FILE = Fair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/HelloMetal",
+					"$(PROJECT_DIR)/Fair",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ferryfair.HelloMetal;
+				PRODUCT_BUNDLE_IDENTIFIER = ferryfair.Fair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Common/HelloMetal-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Common/Fair-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -711,18 +713,18 @@
 		651DB4911EA9CC8E00970AD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 92458GN43Z;
-				INFOPLIST_FILE = HelloMetal/Info.plist;
+				INFOPLIST_FILE = Fair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/HelloMetal",
+					"$(PROJECT_DIR)/Fair",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ferryfair.HelloMetal;
+				PRODUCT_BUNDLE_IDENTIFIER = ferryfair.Fair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Common/HelloMetal-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Common/Fair-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -738,7 +740,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ferryfair.HelloMetalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloMetal.app/HelloMetal";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fair.app/Fair";
 			};
 			name = Debug;
 		};
@@ -753,7 +755,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ferryfair.HelloMetalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloMetal.app/HelloMetal";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fair.app/Fair";
 			};
 			name = Release;
 		};
@@ -788,7 +790,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		65131A9F1F07DD8100151FC8 /* Build configuration list for PBXNativeTarget "HelloMetal-macOS" */ = {
+		65131A9F1F07DD8100151FC8 /* Build configuration list for PBXNativeTarget "Fair-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65131A9D1F07DD8100151FC8 /* Debug */,
@@ -797,7 +799,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		651DB4621EA9CC8E00970AD3 /* Build configuration list for PBXProject "HelloMetal" */ = {
+		651DB4621EA9CC8E00970AD3 /* Build configuration list for PBXProject "Fair" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				651DB48D1EA9CC8E00970AD3 /* Debug */,
@@ -806,7 +808,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		651DB48F1EA9CC8E00970AD3 /* Build configuration list for PBXNativeTarget "HelloMetal" */ = {
+		651DB48F1EA9CC8E00970AD3 /* Build configuration list for PBXNativeTarget "Fair" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				651DB4901EA9CC8E00970AD3 /* Debug */,
@@ -815,7 +817,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		651DB4921EA9CC8E00970AD3 /* Build configuration list for PBXNativeTarget "HelloMetalTests" */ = {
+		651DB4921EA9CC8E00970AD3 /* Build configuration list for PBXNativeTarget "FairTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				651DB4931EA9CC8E00970AD3 /* Debug */,
@@ -824,7 +826,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		651DB4951EA9CC8E00970AD3 /* Build configuration list for PBXNativeTarget "HelloMetalUITests" */ = {
+		651DB4951EA9CC8E00970AD3 /* Build configuration list for PBXNativeTarget "FairUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				651DB4961EA9CC8E00970AD3 /* Debug */,
