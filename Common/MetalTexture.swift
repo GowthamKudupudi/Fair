@@ -61,7 +61,10 @@ class MetalTexture: NSObject {
     
     let rowBytes = width * bytesPerPixel
     
-    let context = CGContext(data: nil, width: width, height: height, bitsPerComponent: bitsPerComponent, bytesPerRow: rowBytes, space: colorSpace, bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue)!
+    let context = CGContext(data: nil, width: width, height: height, 
+      bitsPerComponent: bitsPerComponent, bytesPerRow: rowBytes,
+      space: colorSpace, 
+      bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue)!
     let bounds = CGRect(x: 0, y: 0, width: Int(width), height: Int(height))
     context.clear(bounds)
     

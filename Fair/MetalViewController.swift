@@ -9,7 +9,7 @@
 import UIKit
 import Metal
 
-protocol MetalViewControllerDelegate : class{
+protocol MetalViewControllerDelegate : class {
     func updateLogic(timeSinceLastUpdate: CFTimeInterval)
     func renderObjects(drawable: CAMetalDrawable)
 }
