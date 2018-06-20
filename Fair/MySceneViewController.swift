@@ -52,7 +52,7 @@ class MySceneViewController: MetalViewController,MetalViewControllerDelegate {
     }
     
     // 2
-    func pan(panGesture: UIPanGestureRecognizer){
+    @objc func pan(panGesture: UIPanGestureRecognizer){
         if panGesture.state == UIGestureRecognizerState.changed {
             let pointInView = panGesture.location(in: self.view)
             // 3

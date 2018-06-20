@@ -9,17 +9,18 @@
 #include <metal_stdlib>
 #include <simd/simd.h>
 
-// Include header shared between this Metal shader code and C code executing Metal API commands
+// Include header shared between this Metal shader code and C code executing 
+// Metal API commands
 #import "ShaderTypes.h"
 
 using namespace metal;
 
-// Per-vertex inputs fed by vertex buffer laid out with MTLVertexDescriptor in Metal API
-typedef struct
-{
+// Per-vertex inputs fed by vertex buffer laid out with MTLVertexDescriptor in 
+// Metal API
+typedef struct {
     float3 position [[attribute(kVertexAttributePosition)]];
     float2 texCoord [[attribute(kVertexAttributeTexcoord)]];
-    half3 normal    [[attribute(kVertexAttributeNormal)]];
+    half3  normal   [[attribute(kVertexAttributeNormal)]];
 } Vertex;
 
 // Vertex shader outputs and per-fragmeht inputs.  Includes clip-space position and vertex outputs

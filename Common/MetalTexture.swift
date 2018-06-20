@@ -20,36 +20,42 @@
  * THE SOFTWARE.
  */
 
+#if (iOS)
 import UIKit
+#elseif (macOS)
+import Cocoa
+import AppKit
+import Metal
+import MetalKit
+#endif
 
 class MetalTexture: NSObject {
 
-  var texture: MTLTexture!
-  var target: MTLTextureType!
-  var width: Int!
-  var height: Int!
-  var depth: Int!
-  var format: MTLPixelFormat!
-  var hasAlpha: Bool!
-  var path: String!
-  var isMipmaped: Bool!
-  let bytesPerPixel:Int! = 4
-  let bitsPerComponent:Int! = 8
+   var texture: MTLTexture!
+   var target: MTLTextureType!
+   var width: Int!
+   var height: Int!
+   var depth: Int!
+   var format: MTLPixelFormat!
+   var hasAlpha: Bool!
+   var path: String!
+   var isMipmaped: Bool!
+   let bytesPerPixel:Int! = 4
+   let bitsPerComponent:Int! = 8
   
   //MARK: - Creation
-  init(resourceName: String,ext: String, mipmaped:Bool){
-    
-    path = Bundle.main.path(forResource: resourceName, ofType: ext)
-    width    = 0
-    height   = 0
-    depth    = 1
-    format   = MTLPixelFormat.rgba8Unorm
-    target   = MTLTextureType.type2D
-    texture  = nil
-    isMipmaped = mipmaped
-    
-    super.init()
-  }
+   init (resourceName: String, ext: String, mipmaped:Bool) {
+      path        = Bundle.main.path(forResource: resourceName, ofType: ext)
+      width       = 0
+      height      = 0
+      depth       = 1
+      format      = MTLPixelFormat.rgba8Unorm
+      target      = MTLTextureType.type2D
+      texture     = nil
+      isMipmaped  = mipmaped
+      
+      super.init()
+   }
   
   func loadTexture(device: MTLDevice, commandQ: MTLCommandQueue, flip: Bool){
     
@@ -68,7 +74,7 @@ class MetalTexture: NSObject {
     let bounds = CGRect(x: 0, y: 0, width: Int(width), height: Int(height))
     context.clear(bounds)
     
-    if flip == false{
+    if flip == false {
       context.translateBy(x: 0, y: CGFloat(self.height))
       context.scaleBy(x: 1.0, y: -1.0)
     }
@@ -102,8 +108,8 @@ class MetalTexture: NSObject {
     let region = MTLRegionMake2D(0, 0, Int(source.width), Int(source.height))
     let pixelsData = malloc(source.width * source.height * 4)!
     source.getBytes(pixelsData, bytesPerRow: Int(source.width) * 4, from: region, mipmapLevel: 0)
-    copyTexture.replace(region: region, mipmapLevel: 0, withBytes: pixelsData, bytesPerRow: Int(source.width) * 4)
-    return copyTexture
+    copyTexture?.replace(region: region, mipmapLevel: 0, withBytes: pixelsData, bytesPerRow: Int(source.width) * 4)
+    return copyTexture!
   }
   
   class func copyMipLayer(source:MTLTexture, destination:MTLTexture, mipLvl: Int){
@@ -161,14 +167,14 @@ class MetalTexture: NSObject {
     
     let commandBuffer = commandQ.makeCommandBuffer()
     
-    commandBuffer.addCompletedHandler(block)
+    commandBuffer?.addCompletedHandler(block)
     
-    let blitCommandEncoder = commandBuffer.makeBlitCommandEncoder()
+    let blitCommandEncoder = commandBuffer?.makeBlitCommandEncoder()
     
-    blitCommandEncoder.generateMipmaps(for: texture)
-    blitCommandEncoder.endEncoding()
+    blitCommandEncoder?.generateMipmaps(for: texture)
+    blitCommandEncoder?.endEncoding()
     
-    commandBuffer.commit()
+    commandBuffer?.commit()
   }
   
 }

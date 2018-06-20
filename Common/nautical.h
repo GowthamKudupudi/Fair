@@ -11,12 +11,15 @@
 
 #import <OpenGLES/ES2/glext.h>
 
-struct MyFloat3{
+struct MyFloat3 {
     float x;
     float y;
     float z;
 };
-void Normal(const GLfloat* gfSolid, unsigned int uiSolidSize, GLfloat* gfSphere, unsigned int uiSphereSize, unsigned short iRegression, unsigned short usDimensions);
+void Normal (const GLfloat* gfSolid, unsigned int uiSolidSize, 
+   GLfloat* gfSphere, unsigned int uiSphereSize, unsigned short iRegression, 
+   unsigned short usDimensions);
+
 MyFloat3 Curl(const float triangle[3][3]);
 
 #endif /* nautical_h */

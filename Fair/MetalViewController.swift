@@ -39,7 +39,7 @@ class MetalViewController: UIViewController {
         view.layer.addSublayer(metalLayer)
         
         // 1
-        let defaultLibrary = device.newDefaultLibrary()!
+        let defaultLibrary = device.makeDefaultLibrary()!
         let fragmentProgram = defaultLibrary.makeFunction(name: "basic_fragment")
         let vertexProgram = defaultLibrary.makeFunction(name: "basic_vertex")
         
@@ -83,7 +83,7 @@ class MetalViewController: UIViewController {
         self.metalViewControllerDelegate?.renderObjects(drawable: drawable)
     }
     
-    func newFrame(displayLink: CADisplayLink){
+    @objc func newFrame(displayLink: CADisplayLink){
         if lastFrameTimestamp == 0.0
         {
             lastFrameTimestamp = displayLink.timestamp
