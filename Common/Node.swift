@@ -33,7 +33,7 @@ class BasicNode {
    lazy var samplerState: MTLSamplerState? = 
       Node.defaultSampler(device: self.device)
    let light = Light(color: (1.0, 1.0, 1.0), ambientIntensity: 0.1, 
-      position: (0.0,0.0,12.0,1.0), intensity: 100.0, shininess: 15)
+                     position: (0.0,0.0,12.0,1.0), intensity: 100.0, shininess: 15)
    let motionManager = CMMotionManager()
    // Sound
    let sampleRate = 44100
@@ -45,15 +45,15 @@ class BasicNode {
    var player = Player()
    var ringBufProvider: RingBufferProvider
    init ( name: String, device: MTLDevice, vertexData: Array<Float>,
-      vertexCount: Int, texture: MTLTexture, indexData: Array<UInt16>
-   ) {
+          vertexCount: Int, texture: MTLTexture, indexData: Array<UInt16>
+      ) {
       self.name = name
       self.device = device
       var dataSize = vertexData.count * MemoryLayout.size(ofValue: vertexData[0])
       vertexBuffer = device.makeBuffer(bytes: vertexData, length: dataSize, options:[])!
       let sizeOfUniformsBuffer = MemoryLayout<Float>.size * Matrix4.numberOfElements() * 3 + Light.size()
       self.bufferProvider = BufferProvider(device: device, 
-         inflightBuffersCount: 3, sizeOfUniformsBuffer: sizeOfUniformsBuffer)
+                                           inflightBuffersCount: 3, sizeOfUniformsBuffer: sizeOfUniformsBuffer)
       self.vertexCount=vertexCount
       self.texture = texture
       if motionManager.isDeviceMotionAvailable {
@@ -72,19 +72,19 @@ class BasicNode {
          mReserved:          UInt32(0)
       )
       AudioQueueNewOutput(&inFormat, AQOutputCallback, 
-         &player, nil, nil, 0, &inQueue)
+                          &player, nil, nil, 0, &inQueue)
       ringBufProvider = RingBufferProvider(inQueue: inQueue!, 
-         inflightBuffersCount: ringBufferCount, 
-         sizeOfRingBuffer: numChannels*sampleRate/50)
+                                           inflightBuffersCount: ringBufferCount, 
+                                           sizeOfRingBuffer: numChannels*sampleRate/50)
       player.packetDescs = 
          UnsafeMutablePointer<AudioStreamPacketDescription>.allocate(
             capacity: MemoryLayout<AudioStreamPacketDescription>.size
-            * Int(player.numPacketsToRead)
-         )
+               * Int(player.numPacketsToRead)
+      )
       if(indexData.count > 0) {
          dataSize = indexData.count * MemoryLayout.size(ofValue: indexData[0])
          indexBuffer = device.makeBuffer(bytes: indexData, length: dataSize,
-         options:[])
+                                         options:[])
       }
    }
    deinit {
@@ -98,10 +98,10 @@ class BasicNode {
       var isDone = false
    }
    func render(commandQueue: MTLCommandQueue, 
-      pipelineState:MTLRenderPipelineState, drawable: CAMetalDrawable,
-      parentModelViewMatrix: Matrix4, projectionMatrix: Matrix4, 
-      clearColor:MTLClearColor?
-   ) {
+               pipelineState:MTLRenderPipelineState, drawable: CAMetalDrawable,
+               parentModelViewMatrix: Matrix4, projectionMatrix: Matrix4, 
+               clearColor:MTLClearColor?
+      ) {
       _ = bufferProvider.avaliableResourcesSemaphore.wait(
          timeout: DispatchTime.distantFuture)
       let renderPassDescriptor = MTLRenderPassDescriptor()
@@ -133,12 +133,12 @@ class BasicNode {
       renderEncoder!.setFragmentBuffer(uniformBuffer,offset:0, index: 1)
       if(indexBuffer==nil){
          renderEncoder!.drawPrimitives(type: .triangle, vertexStart: 0,
-            vertexCount: vertexCount, instanceCount: 1)
+                                       vertexCount: vertexCount, instanceCount: 1)
       }
       else {
          renderEncoder!.drawIndexedPrimitives(type: .triangle, 
-            indexCount: vertexCount, indexType: .uint16, 
-            indexBuffer: indexBuffer!, indexBufferOffset: 0)
+                                              indexCount: vertexCount, indexType: .uint16, 
+                                              indexBuffer: indexBuffer!, indexBufferOffset: 0)
       }
       renderEncoder!.endEncoding()
       commandBuffer!.present(drawable)
@@ -149,7 +149,7 @@ class BasicNode {
       
       //            var presentRingBufRef = self.ringBufProvider.nextRingBuffer()
       //            var presentRingBuf = UnsafeMutableBufferPointer<UInt16>(start:        presentRingBufRef.pointee.mAudioData.assumingMemoryBound(to: UInt16.self),count:self.ringBufProvider.sizeOfRingBuffer)
-      //            
+      //
       //            for var i in stride(from:0,to:self.ringBufferCount-1, by:2){
       //                presentRingBuf[i]=UInt16(Float(UInt32.max)*sin(2*Float.pi*Magnitude(of: self.velocity))).bigEndian
       //                presentRingBuf[i+1] = presentRingBuf[i]
@@ -164,11 +164,11 @@ class BasicNode {
    let AQOutputCallback: AudioQueueOutputCallback = {(inUserData, inAQ, inCompleteAQBuffer) -> () in
       //let aqp = UnsafeMutablePointer<Player>(inUserData).memory
       //        let aqp = inUserData?.assumingMemoryBound(to: Player.self).pointee
-      //        
+      //
       //        guard !(aqp?.isDone)! else {
       //            return
       //        }
-      //        
+      //
       //        var numBytes = UInt32()
       //        var nPackets = aqp?.numPacketsToRead
       
@@ -190,8 +190,8 @@ class BasicNode {
          var data = motionManager.deviceMotion
          if(data != nil){
             var accel = float3(Float((data?.userAcceleration.x)!), 
-               Float((data?.userAcceleration.y)!), 
-               Float((data?.userAcceleration.z)!))
+                               Float((data?.userAcceleration.y)!), 
+                               Float((data?.userAcceleration.z)!))
             accel*=100
             var dt2 = pow(dt, 2)
             var accFact = (dt2/2)/(1+(restoringFactor*dt2/4))
@@ -280,7 +280,7 @@ class Node_legacy:BasicNode{
          }
       }
       super.init(name:name,device:device,vertexData: vertexData,
-         vertexCount:count, texture:texture, indexData: indexData)
+                 vertexCount:count, texture:texture, indexData: indexData)
       
    }
    
@@ -294,7 +294,7 @@ class Node:BasicNode{
          vertexData += vertex.floatBuffer()
       }
       super.init(name:name,device:device,vertexData: vertexData, 
-         vertexCount:vertices.count, texture:texture, indexData: indexData)
+                 vertexCount:vertices.count, texture:texture, indexData: indexData)
    }
 }
 

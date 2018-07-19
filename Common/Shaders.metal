@@ -7,6 +7,7 @@
 //
 
 #include <metal_stdlib>
+
 using namespace metal;
 
 struct VertexIn {
@@ -54,14 +55,31 @@ vertex VertexOut basic_vertex (
    float4x4 viewMatrix = Uniforms.viewMatrix;
    float4x4 projMatrix = Uniforms.projectionMatrix;
    VertexIn VertexIn = vertex_array[vid];
-   
+   float3 Vertex1 = VertexIn.position;
+   float3 Vertex2;
+   float3 Vertex3;
+   float3 Vector1;
+   float3 Vector2;
+   if (vid%3 == 0) {
+      Vertex2 = vertex_array[vid+1].position;
+      Vertex3 = vertex_array[vid+2].position;
+   } else if (vid%3 == 1) {
+      Vertex2 = vertex_array[vid+1].position;
+      Vertex3 = vertex_array[vid-1].position;
+   } else {
+      Vertex2 = vertex_array[vid-2].position;
+      Vertex3 = vertex_array[vid-1].position;
+   }
+   Vector1 = Vertex2 - Vertex3;
+   Vector2 = Vertex2 - Vertex1;
    VertexOut VertexOut;
-   float4 vertexPosition = 
+   float4 vertexPosition =
       viewMatrix * modelMatrix * float4(VertexIn.position, 1);
    float4 lightPosition = viewMatrix * (float4)Uniforms.light.position;
    float3 lightFromVertex = normalize((lightPosition-vertexPosition).xyz);
-   float3 vertexNormal = normalize(
-      (viewMatrix * modelMatrix * float4(VertexIn.position, 0.0)).xyz
+   float3 vertexNormal = cross(Vector1, Vector2);
+   vertexNormal = normalize (
+      (viewMatrix * modelMatrix * float4(vertexNormal, 0.0)).xyz
    );
    float3 vertexDirection = normalize(vertexPosition.xyz);
    float3 lightReflection = reflect(-lightFromVertex, vertexNormal);
