@@ -25,9 +25,9 @@ class MySceneViewController: MetalViewController,MetalViewControllerDelegate {
       viewMatrix = Matrix4()
       viewMatrix.translate(0.0, y: 0.0, z: -3.0)
       
-      objectToDraw = FragedCube (device: device, commandQ: commandQueue)
+      //objectToDraw = FragedCube (device: device, commandQ: commandQueue)
       //objectToDraw = Cube (device: device, commandQ: commandQueue)
-      //objectToDraw = Icosahedron(device: device, commandQ:commandQueue)
+      objectToDraw = Icosahedron(device: device, commandQ:commandQueue)
       //objectToDraw = Sphere(device: device, commandQ:commandQueue)
       
       self.metalViewControllerDelegate = self
